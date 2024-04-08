@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+max-height: 100vh;
+
+ }
+        .conatiner-title
+        {
+       text-align: center;
+       font-size: 50px;
+        }
+        .container
+        {
+            border:solid 2px black;
+            width: 400px;
+            display: block;
+            justify-content: center;
+            margin:20px auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0,0, 0.1);
+        }
+        .img
+        {
+            margin: 10px auto;
+            display: block;
+            justify-content: center;
+            padding: 20px, 30px;
+            height: 300px;
+            width:320px;
+
+        }
+        .btn
+        {
+            padding:10px,20px;
+            font-size: 20px;
+            display:inline;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: black;
+            color: whitesmoke;
+            margin:5px;
+            border: 2px solid black;
+            cursor: pointer;
+
+
+        }
+        .btn:hover 
+        {
+            box-shadow:0,0,10,rgba(0, 0,0, 0.3) ;
+        }
+        .summer-btn
+        {
+            background-color: green;
+            
+        }
+        .winter-btn
+        {
+            background-color:red ;
+            
+        }
+        .container1
+        {
+        display: flex;
+        justify-content: center ;
+        
+        }
+@media screen and (max-width:600px)
+{
+    .container
+    {
+        width: 80%;
+    }
+    .img
+    {
+        width: 200px;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <h1 class="conatiner-title">Buld Toggler</h1>
+    <div class="container">
+        <img src="snowman.png" height="250px" width="300px" class="img" id="season">
+        </div>
+        <div class="container1">
+            <button class="btn summer-btn" id="summ" onclick="summer()">Summer</button>
+            <button class="btn winter-btn" id="win" onclick="winter()">Winter</button>
+            </div>
+    <script>
+        function summer()
+        {
+            const sum = document.getElementById("season");
+            sum.src = `vacations.png`;
+            
+        }
+
+        function winter()
+        {
+            const win = document.getElementById("season");
+            win.src = `snowman.png`;
+
+        }
+            
+        
+        </script>
+    
+
+
+</body>
+</html>
